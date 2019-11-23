@@ -13,7 +13,7 @@ dt = .001;                     %[s]        Time Step
 g = 32.2;                       %[ft/s/s]   Newton Gravitational Constant
 Isp = 165;                      %[s]        Specific Impulse
 m_prop = 27;                    %[lbm]      Propellant Mass
-m_dry = 125;                    %[lbm]      Dry Mass
+m_dry = 95;                    %[lbm]      Dry Mass
 mdot_inital = 5;             %[lbm/s]    Inital Mass Flow Rate
 mdot_average = 2.3;            %[lbm/s]    Average Mass Flow Rate
 tb = m_prop/mdot_average;       %[s]        Burn Time
@@ -125,46 +125,46 @@ t_apogee = t_t(length(t_t));
 %% Plotting
 figure(1)
 
-% subplot(5,1,1)
-% plot(t_t, h_t);
-% xlabel('Time (s)');
-% ylabel('Height (ft)');
-% title('Height(t)');
-% 
-% subplot(5,1,2)
-% plot(t_t, v_t);
-% xlabel('Time (s)');
-% ylabel('Velocity (ft/s)');
-% title('Velocity(t)');
-% 
-% subplot(5,1,3)
-% plot(t_t, gt_t/dt);
-% xlabel('Time (s)');
-% ylabel('Gravity Loss (ft)');
-% title('Gravity Loss(t)');
-% 
-% subplot(5,1,4)
-% plot(t_t, D_t/dt);
-% xlabel('Time (s)');
-% ylabel('Drag Loss(ft)');
-% title('Drag Loss(t)');
+subplot(4,1,1)
+plot(t_t, h_t);
+xlabel('Time (s)');
+ylabel('Height (ft)');
+title('Height(t)');
+
+subplot(4,1,2)
+plot(t_t, v_t);
+xlabel('Time (s)');
+ylabel('Velocity (ft/s)');
+title('Velocity(t)');
+
+subplot(4,1,3)
+plot(t_t, gt_t/dt);
+xlabel('Time (s)');
+ylabel('Gravity Loss (ft)');
+title('Gravity Loss(t)');
+
+subplot(4,1,4)
+plot(t_t, D_t/dt);
+xlabel('Time (s)');
+ylabel('Drag Loss(ft)');
+title('Drag Loss(t)');
 % 
 % subplot (1,1,1)
 % plot (h_t,newQ);
 % xlabel ('Altitude (ft)');
 % ylabel ('Q (lb/ft^3)');
 % title ('Dynamic Pressure');
-subplot (2,1,1)
-plot (h_t,mach_t);
-xlabel ('Altitude (ft)');
-ylabel ('Mach number');
-title ('Mach Number (h)');
-
-subplot (2,1,2)
-plot (t_t,mach_t);
-xlabel ('time (s)');
-ylabel ('Mach number');
-title ('Mach Number (t)');
+% subplot (2,1,1)
+% plot (h_t,mach_t);
+% xlabel ('Altitude (ft)');
+% ylabel ('Mach number');
+% title ('Mach Number (h)');
+% 
+% subplot (2,1,2)
+% plot (t_t,mach_t);
+% xlabel ('time (s)');
+% ylabel ('Mach number');
+% title ('Mach Number (t)');
 
 %% Command Window Output
 fprintf('Dry Mass: %35.0f lbm\n',m_dry);

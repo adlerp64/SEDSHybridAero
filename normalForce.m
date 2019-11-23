@@ -15,9 +15,9 @@ l_tr = l_n + l_b;                       % [ft] length of whole rocket
 % Fin Parameters
 n = 3;                                  % [ ]  number of fins
 l_r = 10/12;                            % [ft] fin root chord length
-l_t = 3.172/12;                         % [ft] fin tip chord length
+l_t = .77/12;                           % [ft] fin tip chord length
 l_w = 6.781/12;                         % [ft] fin sweep length
-l_s = 5.512/12;                         % [ft] fin span length
+l_s = 7.75/12;                          % [ft] fin span length
 x_f = 154/12;                           % [ft] location of fins from tip
 d_f = 0.5;                              % [ft] body diameter at fins
 l_m = sqrt(l_s^2 + (l_r-l_t)^2);        % [ft] fin mid-chord length
